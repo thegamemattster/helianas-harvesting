@@ -1956,7 +1956,7 @@
     },
     {
         "creatureType": "Ancient One",
-        "name": "Fragment of Aether", 
+        "name": "Fragment of Aether",
         "dc": 25,
         "id": "7Z8QxriRKjB4awDn", // Reused Celestial Soul ID (closest generic 'magic' item)
         "img": "icons/magic/light/explosion-star-glow-blue-purple.webp",
