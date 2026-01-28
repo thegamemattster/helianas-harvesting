@@ -3,6 +3,7 @@ export class ComponentDatabase {
     bosses = new Map();
     creatureTypes = [
         "Aberration",
+        "Ancient One",
         "Beast",
         "Celestial",
         "Construct",
