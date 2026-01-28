@@ -1,8 +1,8 @@
 {
   "id": "helianas-harvesting",
   "title": "Heliana's Harvesting",
-  "description": "<p>Initial Testing Version of a Harvesting Module to aid with Heliana's Harvesting Rules.</p>",
-  "version": "0.5.0",
+  "description": "<p>Initial Testing Version of a Harvesting Module to aid with Heliana's Harvesting Rules. - Modified by thegamemattster</p>",
+  "version": "9.9.9",
   "compatibility": {
     "minimum": "13",
     "verified": "13.347"
