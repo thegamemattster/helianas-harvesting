@@ -20,12 +20,12 @@ export class ComponentDatabase {
     ];
 
     constructor() {
-        this._injectAllItems();
+        this._injectMasterItemList();
     }
 
-    _injectAllItems() {
-        const allItems = [
-            // Standard Aberrations
+    _injectMasterItemList() {
+        const masterList = [
+            // --- ABERRATIONS ---
             { "creatureType": "Aberration", "name": "Aberration Antenna", "dc": 5, "id": "mThBpshzp6qS1MQi", "img": "icons/commodities/biological/antenna-blue.webp", "crafting": true, "edible": false },
             { "creatureType": "Aberration", "name": "Aberration Eye", "dc": 5, "id": "FFvArli2j1V6vQ17", "img": "icons/commodities/biological/eye-tentacle-grey-orange.webp", "crafting": true, "edible": true },
             { "creatureType": "Aberration", "name": "Aberration Flesh", "dc": 5, "id": "ocvVlUOFfBxY4JB6", "img": "icons/consumables/meat/ribs-glowing-purple.webp", "crafting": false, "edible": true },
@@ -45,8 +45,8 @@ export class ComponentDatabase {
             { "creatureType": "Aberration", "name": "Aberration Chitin", "dc": 20, "id": "y1wwwjUM3OSUwKy1", "img": "icons/commodities/biological/shell-ridged-blue.webp", "crafting": true, "edible": false },
             { "creatureType": "Aberration", "name": "Aberration Hide", "dc": 20, "id": "NzaynVVgPInD2LZv", "img": "icons/commodities/leather/scale-chitin-grey.webp", "crafting": true, "edible": false },
             { "creatureType": "Aberration", "name": "Aberration Main Eye", "dc": 20, "id": "vnyhV87jkWP7Mrng", "img": "icons/commodities/biological/eye-tentacle-grey-orange.webp", "volatile": true, "crafting": true, "edible": false },
-            
-            // Standard Beasts
+
+            // --- BEASTS ---
             { "creatureType": "Beast", "name": "Beast Antenna", "dc": 5, "id": "63kQK9z9A2NTVpP5", "img": "icons/commodities/biological/tail-rodent-orange.webp", "crafting": true, "edible": true },
             { "creatureType": "Beast", "name": "Beast Eye", "dc": 5, "id": "MlwNdpnQ6TvJSz70", "img": "icons/commodities/biological/eye-lizard-orange.webp", "crafting": true, "edible": true },
             { "creatureType": "Beast", "name": "Beast Flesh", "dc": 5, "id": "zUpxl9I6pmFg05gG", "img": "icons/consumables/meat/shank-aged-red.webp", "crafting": false, "edible": true },
@@ -73,7 +73,203 @@ export class ComponentDatabase {
             { "creatureType": "Beast", "name": "Beast Chitin", "dc": 20, "id": "sGIgCEeorbjaVVIr", "img": "icons/commodities/biological/shell-tan.webp", "crafting": true, "edible": false },
             { "creatureType": "Beast", "name": "Beast Pelt", "dc": 20, "id": "IohBB5Av8ku7lcaS", "img": "icons/commodities/leather/fur-brown-gold.webp", "crafting": true, "edible": false },
 
-            // CUSTOM: Ancient Ones
+            // --- CELESTIALS ---
+            { "creatureType": "Celestial", "name": "Celestial Eye", "dc": 5, "id": "f0vzWxq07ZRNSb0P", "img": "icons/commodities/biological/eye-blue.webp", "crafting": true, "edible": true },
+            { "creatureType": "Celestial", "name": "Celestial Flesh", "dc": 5, "id": "7cARF83kwHnJzRgl", "img": "icons/consumables/meat/steak-glowing-fatty-white.webp", "crafting": false, "edible": true },
+            { "creatureType": "Celestial", "name": "Phial of Celestial Blood", "dc": 5, "id": "tCjYYmrWoOGWAIJ5", "img": "icons/consumables/potions/potion-vial-tube-yellow.webp", "crafting": true, "edible": true },
+            { "creatureType": "Celestial", "name": "Pouch of Celestial Dust", "dc": 5, "id": "HPprrBKDy38nCPzu", "img": "icons/containers/bags/coinpouch-simple-tan.webp", "crafting": true, "edible": true },
+            { "creatureType": "Celestial", "name": "Celestial Bone", "dc": 10, "id": "oYlfu54Ps2NiTXBz", "img": "icons/commodities/bones/bone-simple-grey.webp", "crafting": false, "edible": true },
+            { "creatureType": "Celestial", "name": "Celestial Fat", "dc": 10, "id": "6MLu1IWoxEKhpSQd", "img": "icons/commodities/biological/pustules-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Celestial", "name": "Celestial Horn", "dc": 10, "id": "aMzAJ1jEth8pAepp", "img": "icons/commodities/bones/horn-jagged-yellow.webp", "crafting": true, "edible": false },
+            { "creatureType": "Celestial", "name": "Pouch of Celestial Teeth", "dc": 10, "id": "cAlKUufC49wyZipR", "img": "icons/commodities/bones/teeth-sharp-white.webp", "crafting": true, "edible": false },
+            { "creatureType": "Celestial", "name": "Celestial Heart", "dc": 15, "id": "c0VpQ2VOOOS2dRkA", "img": "icons/consumables/meat/heart-organ-realistic-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Celestial", "name": "Celestial Liver", "dc": 15, "id": "LpCjvL0ps1STJsu7", "img": "icons/commodities/biological/tongue-brown.webp", "crafting": false, "edible": true },
+            { "creatureType": "Celestial", "name": "Pouch of Celestial Feathers", "dc": 15, "id": "OXzIMGFo0mABAkbE", "img": "icons/containers/bags/coinpouch-simple-leather-silver-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Celestial", "name": "Pouch of Celestial Scales", "dc": 15, "id": "ba4zNUpWFrEBsWlN", "img": "icons/containers/bags/coinpouch-simple-leather-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Celestial", "name": "Celestial Brain", "dc": 20, "id": "jqXveLg9YLtK7dn3", "img": "icons/commodities/biological/organ-brain-pink.webp", "crafting": false, "edible": true },
+            { "creatureType": "Celestial", "name": "Celestial Skin", "dc": 20, "id": "lB2NvUMY9yA5K26r", "img": "icons/commodities/leather/leather-bolt-tan.webp", "crafting": true, "edible": false },
+            { "creatureType": "Celestial", "name": "Celestial Soul", "dc": 25, "id": "Hfq7q7Kam5fNd97o", "img": "icons/magic/symbols/runes-star-pentagon-blue.webp", "volatile": true, "crafting": true, "edible": false },
+
+            // --- CONSTRUCTS ---
+            { "creatureType": "Construct", "name": "Phial of Construct Blood", "dc": 5, "id": "DbBMwWcAQ6sHlts7", "img": "icons/consumables/potions/potion-tube-corked-blue.webp", "crafting": true, "edible": true },
+            { "creatureType": "Construct", "name": "Phial of Construct Oil", "dc": 5, "id": "Xl6yAscw4bGt63y1", "img": "icons/consumables/potions/potion-bottle-labeled-medicine-capped-red-black.webp", "crafting": true, "edible": true },
+            { "creatureType": "Construct", "name": "Construct Flesh", "dc": 10, "id": "9b5oDdUgbmFnmCzh", "img": "icons/consumables/meat/steak-spoiled-yellow.webp", "crafting": true, "edible": true },
+            { "creatureType": "Construct", "name": "Construct Plating", "dc": 10, "id": "87bCx26JGVjaY5SS", "img": "icons/commodities/metal/mail-plate-steel.webp", "crafting": true, "edible": false },
+            { "creatureType": "Construct", "name": "Construct Stone", "dc": 10, "id": "qcmPfB2BqQgzGyKm", "img": "icons/commodities/stone/masonry-block-cube-grey-teal.webp", "crafting": true, "edible": false },
+            { "creatureType": "Construct", "name": "Construct Bone", "dc": 15, "id": "PNBpZzmeBSHtuJJX", "img": "icons/commodities/bones/bone-broken-grey-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Construct", "name": "Construct Heart", "dc": 15, "id": "jfwjsBrOPaRx5HxD", "img": "icons/commodities/tech/bearing-steel-green.webp", "crafting": false, "edible": true },
+            { "creatureType": "Construct", "name": "Construct Liver", "dc": 15, "id": "tXZYA2dXTBacjE8Y", "img": "icons/commodities/biological/tongue-brown.webp", "crafting": false, "edible": true },
+            { "creatureType": "Construct", "name": "Construct Gears", "dc": 15, "id": "lg7XAcGRAcjYQcPG", "img": "icons/commodities/tech/cog-gold.webp", "crafting": true, "edible": false },
+            { "creatureType": "Construct", "name": "Construct Brain", "dc": 20, "id": "Flywz49U8ViqIZPL", "img": "icons/commodities/biological/organ-brain-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Construct", "name": "Construct Instructions", "dc": 20, "id": "cHnLGG1O2TftyNOu", "img": "icons/sundries/documents/blueprint-recipe-magic.webp", "crafting": true, "edible": false },
+            { "creatureType": "Construct", "name": "Construct Lifespark", "dc": 25, "id": "nxwXhGc8NBLA5XuM", "img": "icons/magic/lightning/bolt-strike-explosion-yellow.webp", "volatile": true, "crafting": true, "edible": false },
+
+            // --- DRAGONS ---
+            { "creatureType": "Dragon", "name": "Dragon Eye", "dc": 5, "id": "A3qPzoyg2OTWBJOl", "img": "icons/creatures/eyes/lizard-single-slit-green.webp", "crafting": true, "edible": true },
+            { "creatureType": "Dragon", "name": "Dragon Flesh", "dc": 5, "id": "36yqGav7C3TOQuRu", "img": "icons/consumables/meat/lamb-chop-rack-raw-red.webp", "crafting": false, "edible": true },
+            { "creatureType": "Dragon", "name": "Phial of Dragon Blood", "dc": 5, "id": "eqFKrrfW66rlnFBx", "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Dragon", "name": "Dragon Bone", "dc": 10, "id": "Wrf7F3joiws0LfKb", "img": "icons/commodities/bones/bones-stack-brown.webp", "crafting": true, "edible": true },
+            { "creatureType": "Dragon", "name": "Dragon Egg", "dc": 10, "id": "5GG8ozvMYwYnr3uh", "img": "icons/consumables/eggs/egg-speckled-green.webp", "crafting": false, "edible": true },
+            { "creatureType": "Dragon", "name": "Dragon Fat", "dc": 10, "id": "EF8ieZM5f27C4RyP", "img": "icons/commodities/biological/pustules-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Dragon", "name": "Pouch of Dragon Claws", "dc": 10, "id": "ZFt4UhHc5Mggky7H", "img": "icons/containers/bags/sack-simple-leather-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Dragon", "name": "Pouch of Dragon Teeth", "dc": 10, "id": "VBr0hd4emdEZIEvh", "img": "icons/commodities/bones/teeth-sharp-white.webp", "crafting": true, "edible": false },
+            { "creatureType": "Dragon", "name": "Dragon Horn", "dc": 15, "id": "VlOSYbeyg3iQKm08", "img": "icons/commodities/bones/horn-jagged-gold.webp", "crafting": true, "edible": false },
+            { "creatureType": "Dragon", "name": "Dragon Liver", "dc": 15, "id": "KAnZyq8ShGKHqBBN", "img": "icons/commodities/biological/tongue-brown.webp", "crafting": false, "edible": true },
+            { "creatureType": "Dragon", "name": "Pouch of Dragon Scales", "dc": 15, "id": "i78vqs99UxYefKCI", "img": "icons/containers/bags/coinpouch-simple-leather-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Dragon", "name": "Dragon Heart", "dc": 20, "id": "YU6uabBB9mAR4B5O", "img": "icons/commodities/biological/organ-liver-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Dragon", "name": "Dragon Breath Sac", "dc": 25, "id": "7oXPZJip7vNsGcOT", "img": "icons/commodities/biological/pustules-brown.webp", "volatile": true, "crafting": true, "edible": false },
+
+            // --- ELEMENTALS ---
+            { "creatureType": "Elemental", "name": "Elemental Eye", "dc": 5, "id": "Dp3nZiuONDzG0WNe", "img": "icons/commodities/biological/eye-lizard-orange.webp", "crafting": true, "edible": true },
+            { "creatureType": "Elemental", "name": "Elemental Primordial Dust", "dc": 5, "id": "DrRWMM7zhbFMSzSX", "img": "icons/commodities/materials/bowl-powder-teal.webp", "crafting": true, "edible": true },
+            { "creatureType": "Elemental", "name": "Elemental Bone", "dc": 10, "id": "xMIlw7VW2cfWQjCO", "img": "icons/commodities/bones/bone-spine-grey.webp", "crafting": true, "edible": true },
+            { "creatureType": "Elemental", "name": "Volatile Mote of Elemental Air", "dc": 15, "id": "6j0yj0EAdskYL9Xu", "img": "icons/magic/air/air-burst-spiral-blue-gray.webp", "volatile": true, "crafting": true, "edible": false },
+            { "creatureType": "Elemental", "name": "Volatile Mote of Elemental Earth", "dc": 15, "id": "tmc7GlTqS6SpkbmW", "img": "icons/magic/earth/projectile-boulder-dust.webp", "volatile": true, "crafting": true, "edible": false },
+            { "creatureType": "Elemental", "name": "Volatile Mote of Elemental Fire", "dc": 15, "id": "ipqCzs5yfdZshALV", "img": "icons/magic/earth/orb-lava-ball-yellow.webp", "volatile": true, "crafting": true, "edible": false },
+            { "creatureType": "Elemental", "name": "Volatile Mote of Elemental Tar", "dc": 15, "id": "jUFUsMaVoPSawVE3", "img": "icons/magic/water/orb-water-bubbles-blue.webp", "volatile": true, "crafting": true, "edible": false },
+            { "creatureType": "Elemental", "name": "Volatile Mote of Elemental Water", "dc": 15, "id": "5vG0Jr4gXLm77iQJ", "img": "icons/magic/water/orb-water-ice-pink.webp", "volatile": true, "crafting": true, "edible": false },
+            { "creatureType": "Elemental", "name": "Core of Elemental Air", "dc": 25, "id": "T0h4LS1FgWbtW1Yl", "img": "icons/magic/air/wind-vortex-swirl-blue-purple.webp", "volatile": true, "crafting": true, "edible": false },
+            { "creatureType": "Elemental", "name": "Core of Elemental Earth", "dc": 25, "id": "JXKfw1i3zfca4FpO", "img": "icons/magic/earth/projectile-moonrock-asteroid.webp", "volatile": true, "crafting": true, "edible": false },
+            { "creatureType": "Elemental", "name": "Core of Elemental Fire", "dc": 25, "id": "GcYYTzakq3RAdrWA", "img": "icons/magic/fire/explosion-fireball-large-red-orange.webp", "volatile": true, "crafting": true, "edible": false },
+            { "creatureType": "Elemental", "name": "Core of Elemental Tar", "dc": 25, "id": "luaMc79eAJ1KJyIF", "img": "icons/magic/water/vortex-water-whirlpool-blue.webp", "crafting": false, "edible": false },
+            { "creatureType": "Elemental", "name": "Core of Elemental Water", "dc": 25, "id": "Nca66iDNA3u3nZVR", "img": "icons/magic/water/bubbles-air-water-blue.webp", "volatile": true, "crafting": true, "edible": false },
+
+            // --- FEY ---
+            { "creatureType": "Fey", "name": "Fey Antenna", "dc": 5, "id": "zG8LGapbh4k8O3EZ", "img": "icons/commodities/biological/tail-puff-grey.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fey", "name": "Fey Eye", "dc": 5, "id": "64sgJIggFsgi0L7u", "img": "icons/commodities/biological/eye-green-pink.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fey", "name": "Fey Flesh", "dc": 5, "id": "HmseQ2BhMRuECTgu", "img": "icons/consumables/meat/tuna-fish-red.webp", "crafting": false, "edible": true },
+            { "creatureType": "Fey", "name": "Phial of Fey Blood", "dc": 5, "id": "yeRCgjVwQ7DyusFf", "img": "icons/consumables/potions/flask-decorated-label-pink.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fey", "name": "Fey Antler", "dc": 10, "id": "cTkKOhZvg5xpSAJf", "img": "icons/commodities/bones/horn-antler-tan.webp", "crafting": false, "edible": false },
+            { "creatureType": "Fey", "name": "Fey Beak", "dc": 10, "id": "Xfd2VjaKWTO1c56G", "img": "icons/commodities/bones/beak-grey-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fey", "name": "Fey Bone", "dc": 10, "id": "NmoGNwrTuccgoDT9", "img": "icons/commodities/bones/bones-rib-white.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fey", "name": "Fey Egg", "dc": 10, "id": "a2xU08NYFn9F6vzA", "img": "icons/consumables/eggs/egg-nest-dotted-red.webp", "crafting": false, "edible": true },
+            { "creatureType": "Fey", "name": "Fey Horn", "dc": 10, "id": "epJgCrtRo4sfrdr5", "img": "icons/commodities/bones/horn-curved-orange.webp", "crafting": false, "edible": false },
+            { "creatureType": "Fey", "name": "Pouch of Fey Claws", "dc": 10, "id": "LLRtSevePwW6DzZY", "img": "icons/containers/bags/sack-simple-leather-brown.webp", "crafting": false, "edible": false },
+            { "creatureType": "Fey", "name": "Pouch of Fey Teeth", "dc": 10, "id": "16sVLmlX0K7dM08Q", "img": "icons/containers/bags/coinpouch-leather-red.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fey", "name": "Fey Talon", "dc": 10, "id": "NoE9zAETMsAmJivJ", "img": "icons/commodities/bones/bones-broken-rib-tan.webp", "crafting": false, "edible": false },
+            { "creatureType": "Fey", "name": "Fey Tusk", "dc": 10, "id": "gmODqz0nUWECGUGp", "img": "icons/commodities/bones/tooth-spiked-brown.webp", "crafting": false, "edible": false },
+            { "creatureType": "Fey", "name": "Fey Heart", "dc": 15, "id": "0CJU10TbDGph88GY", "img": "icons/commodities/biological/organ-heart-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fey", "name": "Fey Fat", "dc": 15, "id": "xIsX4yO6XCAAX0AA", "img": "icons/commodities/biological/pustules-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fey", "name": "Fey Liver", "dc": 15, "id": "oU1RT4tJPp4IzHfG", "img": "icons/commodities/biological/tongue-brown.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fey", "name": "Fey Poison Gland", "dc": 15, "id": "PbL9tdLPXpOBJdoi", "img": "icons/commodities/biological/mouth-pincer-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fey", "name": "Pouch of Fey Feathers", "dc": 15, "id": "QkOa20g9NPulrF8F", "img": "icons/containers/bags/coinpouch-simple-leather-silver-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fey", "name": "Pouch of Fey Scales", "dc": 15, "id": "H8M3EbG0rpQLdr0O", "img": "icons/containers/bags/coinpouch-simple-leather-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fey", "name": "Fey Tentacle", "dc": 15, "id": "FjeqPxwD0Eh1bFeZ", "img": "icons/commodities/biological/tentacle-yellow.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fey", "name": "Fey Tongue", "dc": 15, "id": "0IN26XvZJMUEAYV8", "img": "icons/commodities/biological/tongue-blue.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fey", "name": "Fey Brain", "dc": 20, "id": "fjSfSub0L6mST0Zz", "img": "icons/commodities/biological/organ-brain-pink-purple.webp", "crafting": false, "edible": true },
+            { "creatureType": "Fey", "name": "Fey Skin", "dc": 20, "id": "38jKtQMrqQuY4rDu", "img": "icons/commodities/leather/fur-pink.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fey", "name": "Fey Pelt", "dc": 20, "id": "sLDAHwZgbSQgGdWW", "img": "icons/commodities/leather/fur-blue.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fey", "name": "Fey Psyche", "dc": 25, "id": "PDhdqwQJBPS2VlA3", "img": "icons/magic/symbols/circled-gem-pink.webp", "volatile": true, "crafting": true, "edible": false },
+
+            // --- FIENDS ---
+            { "creatureType": "Fiend", "name": "Fiend Eye", "dc": 5, "id": "avkxkX9FIr7TeRPq", "img": "icons/commodities/biological/eye-blue-gold.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fiend", "name": "Fiend Flesh", "dc": 5, "id": "Ismp7EhsIaBrnBxn", "img": "icons/consumables/meat/lamb-chop-raw-red.webp", "crafting": false, "edible": true },
+            { "creatureType": "Fiend", "name": "Phial of Fiend Blood", "dc": 5, "id": "HQTWHFdCv4WHSKso", "img": "icons/consumables/potions/bottle-corked-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fiend", "name": "Pouch of Fiend Dust", "dc": 5, "id": "hEuQaTZsBW9h8LAP", "img": "icons/containers/bags/coinpouch-simple-tan.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fiend", "name": "Fiend Bone", "dc": 10, "id": "1OdKcBvQY8R40hyC", "img": "icons/commodities/bones/bone-joint-tan.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fiend", "name": "Fiend Horn", "dc": 10, "id": "ohUOCyBVcWk0pYvv", "img": "icons/commodities/bones/horn-jagged-grey.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fiend", "name": "Pouch of Fiend Claws", "dc": 10, "id": "oq3GyTaSEiQTERc2", "img": "icons/containers/bags/sack-simple-leather-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fiend", "name": "Pouch of Fiend Teeth", "dc": 10, "id": "x0QkmzQiyfpTzgys", "img": "icons/containers/bags/coinpouch-leather-red.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fiend", "name": "Fiend Heart", "dc": 15, "id": "iIeA2wkTaNdOAlCT", "img": "icons/commodities/biological/organ-heart-black.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fiend", "name": "Fiend Fat", "dc": 15, "id": "aJgfKtcgq9heFRDX", "img": "icons/commodities/biological/pustules-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Fiend", "name": "Fiend Liver", "dc": 15, "id": "U2iflFXdkgFe7ZAK", "img": "icons/commodities/biological/tongue-brown.webp", "crafting": false, "edible": true },
+            { "creatureType": "Fiend", "name": "Fiend Poison Gland", "dc": 15, "id": "X3dMh8s2AslCkadb", "img": "icons/commodities/biological/tail-scaled-green.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fiend", "name": "Pouch of Fiend Feathers", "dc": 15, "id": "jSTYBrGVxdDO3Xms", "img": "icons/containers/bags/coinpouch-simple-leather-silver-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fiend", "name": "Pouch of Fiend Scales", "dc": 15, "id": "jaowvW0tzwXOurHg", "img": "icons/containers/bags/coinpouch-simple-leather-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fiend", "name": "Fiend Brain", "dc": 20, "id": "cft5xyACBpRZsZs6", "img": "icons/commodities/biological/organ-brain-pink.webp", "crafting": false, "edible": true },
+            { "creatureType": "Fiend", "name": "Fiend Skin", "dc": 20, "id": "XFSxdDal8TdWSaA9", "img": "icons/commodities/leather/scales-green.webp", "crafting": true, "edible": false },
+            { "creatureType": "Fiend", "name": "Fiend Soul", "dc": 25, "id": "KH2nNTWu5d1C5D8z", "img": "icons/magic/symbols/runes-star-pentagon-orange.webp", "volatile": true, "crafting": true, "edible": false },
+
+            // --- GIANTS ---
+            { "creatureType": "Giant", "name": "Giant Flesh", "dc": 5, "id": "Hh87TUjyM2asjiPD", "img": "icons/consumables/meat/hock-fatty-skin-brown-red.webp", "crafting": false, "edible": true },
+            { "creatureType": "Giant", "name": "Giant Nail", "dc": 5, "id": "Wvy5lLUwe4khoWFZ", "img": "icons/commodities/bones/tooth-shark-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Giant", "name": "Phial of Giant Blood", "dc": 5, "id": "zloMUkaNBGzuKVQk", "img": "icons/consumables/potions/bottle-round-corked-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Giant", "name": "Giant Bone", "dc": 10, "id": "qvJJUacV1hJNsjqW", "img": "icons/commodities/bones/bone-simple-white.webp", "crafting": false, "edible": true },
+            { "creatureType": "Giant", "name": "Giant Fat", "dc": 10, "id": "hT3V8qWDXKbiRKGI", "img": "icons/commodities/biological/pustules-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Giant", "name": "Giant Tooth", "dc": 10, "id": "LVCVAX3viWeE3l3t", "img": "icons/commodities/bones/tooth-molar-white-red.webp", "crafting": true, "edible": false },
+            { "creatureType": "Giant", "name": "Giant Heart", "dc": 15, "id": "B3KAXOUbXXneKhEb", "img": "icons/commodities/biological/organ-heart-red.webp", "volatile": true, "crafting": true, "edible": true },
+            { "creatureType": "Giant", "name": "Giant Liver", "dc": 15, "id": "keqUwwbcZ6A7Uj6V", "img": "icons/commodities/biological/tongue-brown.webp", "crafting": true, "edible": true },
+            { "creatureType": "Giant", "name": "Giant Skin", "dc": 20, "id": "2ugxh5VDYE9BSQyn", "img": "icons/commodities/leather/leather-bolt-tan.webp", "crafting": true, "edible": false },
+
+            // --- HUMANOIDS ---
+            { "creatureType": "Humanoid", "name": "Humanoid Eye", "dc": 5, "id": "HuUHuqZfs53WHxfI", "img": "icons/commodities/biological/eye-brown-red.webp", "crafting": true, "edible": false },
+            { "creatureType": "Humanoid", "name": "Phial of Humanoid Blood", "dc": 5, "id": "79aJ7ySW6dmb0635", "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Humanoid", "name": "Humanoid Bone", "dc": 10, "id": "khcaAhWbTgPlLsZy", "img": "icons/commodities/bones/bone-simple-grey.webp", "crafting": true, "edible": true },
+            { "creatureType": "Humanoid", "name": "Humanoid Egg", "dc": 10, "id": "LrzXo5VFqMoUNcdz", "img": "icons/consumables/eggs/egg-spotted-cyan.webp", "crafting": true, "edible": false },
+            { "creatureType": "Humanoid", "name": "Pouch of Humanoid Teeth", "dc": 10, "id": "RKu20rYg91awVGn9", "img": "icons/containers/bags/coinpouch-leather-red.webp", "crafting": true, "edible": false },
+            { "creatureType": "Humanoid", "name": "Humanoid Heart", "dc": 15, "id": "IQty2wmvgO8Mkh5u", "img": "icons/commodities/biological/organ-heart-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Humanoid", "name": "Humanoid Liver", "dc": 15, "id": "L55KPHnnjtY5zFRv", "img": "icons/commodities/biological/tongue-brown.webp", "crafting": true, "edible": true },
+            { "creatureType": "Humanoid", "name": "Pouch of Humanoid Feathers", "dc": 15, "id": "EEiz6By5Now1rwuN", "img": "icons/containers/bags/coinpouch-simple-leather-silver-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Humanoid", "name": "Pouch of Humanoid Scales", "dc": 15, "id": "3eJZfBH8LKArrri9", "img": "icons/containers/bags/coinpouch-simple-leather-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Humanoid", "name": "Humanoid Brain", "dc": 20, "id": "k8OOk9mRHLO4FIYd", "img": "icons/commodities/biological/organ-brain-pink-purple.webp", "crafting": true, "edible": true },
+            { "creatureType": "Humanoid", "name": "Humanoid Skin", "dc": 20, "id": "vCRuBwLkS3GCozMC", "img": "icons/commodities/leather/leather-pelt-cured.webp", "crafting": true, "edible": false },
+
+            // --- MONSTROSITIES ---
+            { "creatureType": "Monstrosity", "name": "Monstrosity Antenna", "dc": 5, "id": "Hkbv1jrFWbD43g0G", "img": "icons/commodities/biological/tentacle-thorned-green.webp", "crafting": true, "edible": true },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Eye", "dc": 5, "id": "YFvz364KlQjcCgnY", "img": "icons/commodities/biological/eye-tentacle-green-orange.webp", "crafting": true, "edible": true },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Flesh", "dc": 5, "id": "gQADm2mPJwrV5LNQ", "img": "icons/consumables/meat/fillet-fish-purple-green.webp", "crafting": false, "edible": true },
+            { "creatureType": "Monstrosity", "name": "Phial of Monstrosity Blood", "dc": 5, "id": "7WBaUdAs6QRcw6LX", "img": "icons/consumables/potions/bottle-round-label-cork-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Antler", "dc": 10, "id": "Mg44MtvSc2kXWCYW", "img": "icons/commodities/bones/horn-antler-tan.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Beak", "dc": 10, "id": "sBFCK8wOVWgkoY3r", "img": "icons/commodities/bones/skull-bird-tan.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Bone", "dc": 10, "id": "IXByIg9HWtqoURaE", "img": "icons/commodities/bones/bones-joint-brown.webp", "crafting": true, "edible": true },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Egg", "dc": 10, "id": "kMyHgAwxD8fDEy2T", "img": "icons/consumables/eggs/egg-spiked-brown.webp", "crafting": false, "edible": true },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Fat", "dc": 10, "id": "ODgZjv1bCzx1fVhw", "img": "icons/commodities/biological/pustules-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Fin", "dc": 10, "id": "vPaMtZ8fHStbRP7v", "img": "icons/commodities/biological/fin-red-green.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Horn", "dc": 10, "id": "4uUFCJoP8b0h4l6o", "img": "icons/commodities/bones/horn-curved-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Pincer", "dc": 10, "id": "OoCfBFim4pHc1mQJ", "img": "icons/creatures/abilities/mouth-teeth-rows-needles-purple.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Pouch of Monstrosity Claws", "dc": 10, "id": "bbmChVcW5DLYk6lw", "img": "icons/containers/bags/sack-simple-leather-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Pouch of Monstrosity Teeth", "dc": 10, "id": "AiCeQyy4udhdOFVs", "img": "icons/containers/bags/coinpouch-leather-red.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Talon", "dc": 10, "id": "wzAvPyeqFw5Gr7kT", "img": "icons/commodities/bones/horn-simple-beige.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Tusk", "dc": 10, "id": "sZIMY1LxXeYwNRsw", "img": "icons/commodities/bones/tooth-canine-tan.webp", "crafting": false, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Heart", "dc": 15, "id": "SyvUpNIEZv3kl0nZ", "img": "icons/commodities/biological/organ-heart-black.webp", "crafting": true, "edible": true },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Liver", "dc": 15, "id": "vlNoBGcKR48rqFN8", "img": "icons/commodities/biological/tongue-brown.webp", "crafting": true, "edible": true },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Poison Gland", "dc": 15, "id": "el7BNKRgRzizWRJ5", "img": "icons/commodities/biological/tail-scaled-green.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Pouch of Monstrosity Feathers", "dc": 15, "id": "f0Vhn42XB5wryuBx", "img": "icons/containers/bags/coinpouch-simple-leather-silver-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Pouch of Monstrosity Scales", "dc": 15, "id": "DmmvAWOXEPDmLeJX", "img": "icons/containers/bags/coinpouch-simple-leather-brown.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Stinger", "dc": 15, "id": "scRplQg5saStEwcd", "img": "icons/creatures/abilities/stinger-poison-green.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Tentacle", "dc": 15, "id": "rW1Xodor47cpyhCL", "img": "icons/commodities/biological/tail-rodent-striped-red.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Chitin", "dc": 20, "id": "ucusMCaHQqzR0jsS", "img": "icons/commodities/biological/shell-ribbed-grey.webp", "crafting": true, "edible": false },
+            { "creatureType": "Monstrosity", "name": "Monstrosity Pelt", "dc": 20, "id": "ZhZ3QEPTqCnxAbDb", "img": "icons/commodities/leather/fur-simple-brown.webp", "crafting": true, "edible": false },
+
+            // --- OOZES ---
+            { "creatureType": "Ooze", "name": "Phial of Ooze Acid", "dc": 5, "id": "EJ6ukmLOW0AVI2ax", "img": "icons/consumables/potions/bottle-conical-corked-labeled-skull-poison-green.webp", "crafting": true, "edible": true },
+            { "creatureType": "Ooze", "name": "Phial of Ooze Mucus", "dc": 10, "id": "6faKGTlnoB9qaEGV", "img": "icons/consumables/potions/bottle-conical-fumes-green.webp", "crafting": true, "edible": true },
+            { "creatureType": "Ooze", "name": "Ooze Vesicle", "dc": 15, "id": "p3RuPY4B6v8GC4tY", "img": "icons/commodities/biological/stinger-insect-pink.webp", "crafting": true, "edible": true },
+            { "source": "MotD", "creatureType": "Ooze", "name": "Ooze Heart", "dc": 20, "id": "ScaYif8qJTlHDd26", "img": "icons/creatures/slimes/slime-blob-pseudopods-green.webp", "crafting": true, "edible": false },
+            { "creatureType": "Ooze", "name": "Ooze Membrane", "dc": 20, "id": "yV25NETDeHuwL0KW", "img": "icons/commodities/biological/suckers-green.webp", "crafting": true, "edible": false },
+
+            // --- PLANTS ---
+            { "creatureType": "Plant", "name": "Phial of Plant Sap", "dc": 5, "id": "ClhLDzU87z4DlE11", "img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp", "crafting": true, "edible": true },
+            { "creatureType": "Plant", "name": "Plant Tuber", "dc": 5, "id": "NTYYmdW1Oc9GBO8s", "img": "icons/consumables/vegetable/root-ginger-yellow.webp", "crafting": true, "edible": true },
+            { "creatureType": "Plant", "name": "Bundle of Plant Roots", "dc": 10, "id": "oyHUdONgiF7nYpCa", "img": "icons/consumables/plants/dried-stem-vine-root-bramble-brown.webp", "crafting": true, "edible": true },
+            { "creatureType": "Plant", "name": "Phial of Plant Wax", "dc": 10, "id": "nTwG7qOPr4O1KdIb", "img": "icons/consumables/potions/round-decorated-snake-green.webp", "crafting": false, "edible": true },
+            { "creatureType": "Plant", "name": "Pouch of Plant Hyphae", "dc": 10, "id": "dQf3AhmCdhXWly5c", "img": "icons/containers/bags/pouch-gold-green.webp", "crafting": true, "edible": true },
+            { "creatureType": "Plant", "name": "Pouch of Plant Leaves", "dc": 10, "id": "XjSnUMOXytj9f2Gy", "img": "icons/containers/bags/pouch-leather-leaf-green.webp", "crafting": true, "edible": false },
+            { "creatureType": "Plant", "name": "Plant Poison Gland", "dc": 15, "id": "m2qvItypCKPwOaMS", "img": "icons/commodities/materials/slime-thick-green.webp", "crafting": true, "edible": true },
+            { "creatureType": "Plant", "name": "Pouch of Plant Pollen", "dc": 15, "id": "YGbRAmidY8RtiI6K", "img": "icons/containers/bags/pouch-leather-green.webp", "volatile": true, "crafting": true, "edible": true },
+            { "creatureType": "Plant", "name": "Pouch of Plant Spores", "dc": 15, "id": "1U4aEXFOooBJTC93", "img": "icons/containers/bags/pack-engraved-leather-blue.webp", "volatile": true, "crafting": true, "edible": true },
+            { "creatureType": "Plant", "name": "Plant Bark", "dc": 20, "id": "SiJprDsuwzvrjjnp", "img": "icons/commodities/wood/logs-rough-brown.webp", "crafting": true, "edible": true },
+            { "creatureType": "Plant", "name": "Plant Membrane", "dc": 20, "id": "jxo80IYK5IY1IQXf", "img": "icons/consumables/plants/leaf-old-dried-curled-green.webp", "crafting": true, "edible": true },
+
+            // --- UNDEAD ---
+            { "creatureType": "Undead", "name": "Undead Eye", "dc": 5, "id": "8RVwd96ncBeqkOZF", "img": "icons/creatures/eyes/lizard-single-slit-pink.webp", "crafting": true, "edible": true },
+            { "creatureType": "Undead", "name": "Undead Bone", "dc": 5, "id": "1t71vPhsR3YOWkcY", "img": "icons/commodities/bones/bone-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Undead", "name": "Phial of Undead Congealed Blood", "dc": 5, "id": "HWfsNczOK8yvTgre", "img": "icons/consumables/potions/conical-mushroom-poison-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Undead", "name": "Undead Marrow", "dc": 10, "id": "BvCRGl3GnJB492aE", "img": "icons/commodities/bones/bones-broken-marrow-white-red.webp", "crafting": true, "edible": false },
+            { "creatureType": "Undead", "name": "Pouch of Undead Teeth", "dc": 10, "id": "lbj5EH5IVfSFjwWD", "img": "icons/containers/bags/coinpouch-leather-red.webp", "crafting": true, "edible": false },
+            { "creatureType": "Undead", "name": "Undead Rancid Fat", "dc": 10, "id": "MBdSGgTqyMw30jY0", "img": "icons/commodities/biological/tongue-brown.webp", "crafting": false, "edible": true },
+            { "creatureType": "Undead", "name": "Undead Ethereal Ichor", "dc": 15, "id": "1REcsIBcwg1YbhMX", "img": "icons/consumables/potions/flask-ornate-skull-green.webp", "crafting": true, "edible": true },
+            { "creatureType": "Undead", "name": "Undead Undying Flesh", "dc": 15, "id": "TzCPgT7JhpP04SkE", "img": "icons/commodities/biological/pustules-red.webp", "crafting": true, "edible": true },
+            { "creatureType": "Undead", "name": "Undead Undying Heart", "dc": 20, "id": "MlB2e2DOagQFNSIy", "img": "icons/commodities/biological/organ-heart-black.webp", "volatile": true, "crafting": true, "edible": true },
+
+            // --- ESSENCES (CreatureType "All") ---
+            { "creatureType": "All", "name": "Frail Essence", "dc": 25, "id": "UrXlLkPy4kYFouSL", "img": "icons/magic/air/fog-gas-smoke-gray.webp", "rarity": "common", "crafting": true, "crMin": 3, "crMax": 6, "value": 100 },
+            { "creatureType": "All", "name": "Robust Essence", "dc": 30, "id": "7CDlOXTRZFLA7mKI", "img": "icons/magic/air/fog-gas-smoke-dense-gray.webp", "rarity": "rare", "crafting": true, "crMin": 7, "crMax": 11, "value": 500 },
+            { "creatureType": "All", "name": "Potent Essence", "dc": 35, "id": "EjeofwnVeGGbfagu", "img": "icons/magic/air/fog-gas-smoke-dense-pink.webp", "rarity": "veryRare", "crafting": true, "crMin": 12, "crMax": 17, "value": 3000 },
+            { "creatureType": "All", "name": "Mythic Essence", "dc": 40, "id": "LtWpCvU5o97RUZF7", "img": "icons/magic/air/fog-gas-smoke-dense-orange.webp", "rarity": "legendary", "crafting": true, "crMin": 18, "crMax": 24, "value": 16000 },
+            { "creatureType": "All", "name": "Deific Essence", "dc": 50, "id": "iJ4FCfpmPYkcUhXU", "img": "icons/magic/air/fog-gas-smoke-swirling-orange.webp", "rarity": "artifact", "crafting": true, "crMin": 25, "value": 160000 },
+
+            // --- CUSTOM: ANCIENT ONES ---
             { "creatureType": "Ancient One", "name": "Ancient One Eye", "dc": 5, "id": "xtQ4HSf0Qr74D6JQ", "img": "icons/commodities/biological/eye-lizard-green.webp", "crafting": true, "edible": true },
             { "creatureType": "Ancient One", "name": "Ancient One Flesh", "dc": 5, "id": "qeHtqGfsQ3SzDvsg", "img": "icons/consumables/meat/fillet-fish-pink-teal.webp", "crafting": false, "edible": true },
             { "creatureType": "Ancient One", "name": "Phial of Ancient Blood", "dc": 5, "id": "Z0x2qTyYa5MPvB1T", "img": "icons/consumables/potions/potion-flask-corked-tied-necklace-teal.webp", "crafting": true, "edible": true },
@@ -83,7 +279,7 @@ export class ComponentDatabase {
             { "creatureType": "Ancient One", "name": "Fragment of Aether", "dc": 25, "id": "7Z8QxriRKjB4awDn", "img": "icons/magic/light/explosion-star-glow-blue-purple.webp", "volatile": true, "crafting": true, "edible": false }
         ];
 
-        allItems.forEach(item => this.addItem(item));
+        masterList.forEach(item => this.addItem(item));
     }
 
     addItem(input) {
@@ -141,8 +337,9 @@ export class ComponentDatabase {
             "img": item.img,
             "system": {
                 "rarity": item.rarity,
-                "description": { "value": `<p>A ${item.name.toLowerCase()} harvested from a ${creatureName}.</p>` },
+                "description": { "value": `<p>A ${item.name.toLowerCase()} harvested from a ${creatureName}. It may be useful in crafting!</p>` },
                 "quantity": item.count,
+                "weight": 0,
                 "price": { "value": item.value, "denomination": "gp" },
                 "identified": true
             },
