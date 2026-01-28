@@ -3,7 +3,7 @@ export class ComponentDatabase {
     bosses = new Map();
     creatureTypes = [
         "Aberration",
-        "Ancient One",
+        "Ancient One", // <--- 1. We added this type
         "Beast",
         "Celestial",
         "Construct",
@@ -18,6 +18,84 @@ export class ComponentDatabase {
         "Plant",
         "Undead"
     ];
+
+    // <--- 2. NEW: The Constructor runs immediately when loaded
+    constructor() {
+        this._injectAncientOneItems();
+    }
+
+    // <--- 3. NEW: This function manually adds your custom items
+    _injectAncientOneItems() {
+        const newItems = [
+            {
+                "creatureType": "Ancient One",
+                "name": "Ancient One Eye",
+                "dc": 5,
+                "id": "xtQ4HSf0Qr74D6JQ",
+                "img": "icons/commodities/biological/eye-lizard-green.webp",
+                "crafting": true,
+                "edible": true
+            },
+            {
+                "creatureType": "Ancient One",
+                "name": "Ancient One Flesh",
+                "dc": 5,
+                "id": "qeHtqGfsQ3SzDvsg", 
+                "img": "icons/consumables/meat/fillet-fish-pink-teal.webp",
+                "crafting": false,
+                "edible": true
+            },
+            {
+                "creatureType": "Ancient One",
+                "name": "Phial of Ancient Blood",
+                "dc": 5,
+                "id": "Z0x2qTyYa5MPvB1T", 
+                "img": "icons/consumables/potions/potion-flask-corked-tied-necklace-teal.webp",
+                "crafting": true,
+                "edible": true
+            },
+            {
+                "creatureType": "Ancient One",
+                "name": "Ancient One Bone",
+                "dc": 10,
+                "id": "WB5aSJn2x9RVwdiD", 
+                "img": "icons/commodities/bones/bone-fragments-grey.webp",
+                "crafting": true,
+                "edible": true
+            },
+            {
+                "creatureType": "Ancient One",
+                "name": "Ancient One Heart",
+                "dc": 15,
+                "id": "eeWS9TY3TfJpZSHO", 
+                "img": "icons/commodities/biological/organ-heart-pink.webp",
+                "crafting": false,
+                "edible": true
+            },
+            {
+                "creatureType": "Ancient One",
+                "name": "Ancient One Brain",
+                "dc": 20,
+                "id": "H057o3P3KBsu3MwH", 
+                "img": "icons/commodities/biological/organ-brain-red.webp",
+                "crafting": true,
+                "edible": true
+            },
+            {
+                "creatureType": "Ancient One",
+                "name": "Fragment of Aether", 
+                "dc": 25,
+                "id": "7Z8QxriRKjB4awDn", 
+                "img": "icons/magic/light/explosion-star-glow-blue-purple.webp",
+                "volatile": true,
+                "crafting": true,
+                "edible": false
+            }
+        ];
+
+        // Loop through the list and add them to the database
+        newItems.forEach(item => this.addItem(item));
+    }
 
     addItem(input) {
         // We test and sanitize the input
