@@ -1901,6 +1901,70 @@
         "edible": true
     },
     {
+        "creatureType": "Ancient One",
+        "name": "Ancient One Eye",
+        "dc": 5,
+        "id": "xtQ4HSf0Qr74D6JQ",
+        "img": "icons/commodities/biological/eye-lizard-green.webp",
+        "crafting": true,
+        "edible": true
+    },
+    {
+        "creatureType": "Ancient One",
+        "name": "Ancient One Flesh",
+        "dc": 5,
+        "id": "qeHtqGfsQ3SzDvsg", // Reused Aberration Flesh ID
+        "img": "icons/consumables/meat/fillet-fish-pink-teal.webp",
+        "crafting": false,
+        "edible": true
+    },
+    {
+        "creatureType": "Ancient One",
+        "name": "Phial of Ancient Blood",
+        "dc": 5,
+        "id": "Z0x2qTyYa5MPvB1T", // Reused Aberration Blood ID
+        "img": "icons/consumables/potions/potion-flask-corked-tied-necklace-teal.webp",
+        "crafting": true,
+        "edible": true
+    },
+    {
+        "creatureType": "Ancient One",
+        "name": "Ancient One Bone",
+        "dc": 10,
+        "id": "WB5aSJn2x9RVwdiD", // Reused Aberration Bone ID
+        "img": "icons/commodities/bones/bone-fragments-grey.webp",
+        "crafting": true,
+        "edible": true
+    },
+    {
+        "creatureType": "Ancient One",
+        "name": "Ancient One Heart",
+        "dc": 15,
+        "id": "eeWS9TY3TfJpZSHO", // Reused Aberration Heart ID
+        "img": "icons/commodities/biological/organ-heart-pink.webp",
+        "crafting": false,
+        "edible": true
+    },
+    {
+        "creatureType": "Ancient One",
+        "name": "Ancient One Brain",
+        "dc": 20,
+        "id": "H057o3P3KBsu3MwH", // Reused Aberration Brain ID
+        "img": "icons/commodities/biological/organ-brain-red.webp",
+        "crafting": true,
+        "edible": true
+    },
+    {
+        "creatureType": "Ancient One",
+        "name": "Fragment of Aether", 
+        "dc": 25,
+        "id": "7Z8QxriRKjB4awDn", // Reused Celestial Soul ID (closest generic 'magic' item)
+        "img": "icons/magic/light/explosion-star-glow-blue-purple.webp",
+        "volatile": true,
+        "crafting": true,
+        "edible": false
+    },
+    {
         "name": "Frail Essence",
         "dc": 25,
         "id": "UrXlLkPy4kYFouSL",
@@ -1954,4 +2018,5 @@
         "crMin": 25,
         "value": 160000
     }
+    
 ]
