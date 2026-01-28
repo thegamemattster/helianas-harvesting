@@ -212,6 +212,7 @@ export default class HarvestWindow extends Application {
   getAssessmentSkill() {
     const skillTable = {
       "Aberration": "Arcana",
+      "Ancient One": "Arcana",
       "Beast": "Survival",
       "Celestial": "Religion",
       "Construct": "Investigation",
@@ -230,7 +231,32 @@ export default class HarvestWindow extends Application {
     return skillTable[this.formData.creatureType] ?? "Other";
   }
 
+  // NEW HELPER: Maps creature types to 3-letter system codes
+  getAssessmentSkillCode(creatureType) {
+    const codeMap = {
+      "Aberration": "arc",
+      "Ancient One": "arc",
+      "Beast": "sur",
+      "Celestial": "rel",
+      "Construct": "inv",
+      "Dragon": "sur",
+      "Elemental": "arc",
+      "Fey": "arc",
+      "Fiend": "rel",
+      "Giant": "med",
+      "Humanoid": "med",
+      "Monstrosity": "sur",
+      "Ooze": "nat",
+      "Plant": "nat",
+      "Undead": "med",
+    };
+    return codeMap[creatureType] ?? "sur";
+  }
+
   showTable() {
+    const skillName = this.getAssessmentSkill();
+    const skillCode = this.getAssessmentSkillCode(this.formData.creatureType);
+
     let message = `<p>${game.i18n.format("HelianasHarvest.ChatHarvestTableMessage", {creatureName: this.formData.creatureName})}</p>`;
     message += `<ul>`;
 
@@ -243,7 +269,10 @@ export default class HarvestWindow extends Application {
     message += `</ul>
       <p>${game.i18n.localize("HelianasHarvest.ChatRollCheckInstructions")}</p>`;
 
-    message += `<p>Assessment check: Intelligence (${this.getAssessmentSkill()})</p>`;
+    // BUTTONS ADDED HERE
+    message += `<p>Assessment check: <strong>${skillName}</strong></p>`;
+    message += `<p>Roll (Int): [[/check ${skillCode} ability=int]]</p>`;
+    message += `<p>Roll (Dex): [[/check ${skillCode} ability=dex]]</p>`;
 
     this.sendChatMessage(message);
   }
